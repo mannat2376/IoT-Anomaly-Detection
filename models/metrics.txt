@@ -1,0 +1,18 @@
+=== IoT Predictive Maintenance — Model Evaluation ===
+
+Dataset: AI4I 2020 Predictive Maintenance Dataset (UCI ML Repository)
+Total Samples: 10,000
+Features: 9 (5 raw sensors + 4 engineered)
+Train/Test Split: 80/20 (stratified)
+
+--- Random Forest (Best Model) ---
+Accuracy:            99.05%
+Precision:           90.16%
+Recall:              80.88%
+F1-Score:            85.27%
+ROC-AUC:             97.14%
+5-Fold CV F1:        83.96% (+/-2.27%)
+
+--- Isolation Forest (Unsupervised Baseline) ---
+Accuracy:            95.70%
+F1-Score:            29.51%
