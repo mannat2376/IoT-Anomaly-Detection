@@ -7,6 +7,8 @@ Author: Mannat Singh
 
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.ensemble import IsolationForest
@@ -230,10 +232,8 @@ axes[1, 1].set_ylim(0, 100)
 for i, v in enumerate(f1_scores):
     axes[1, 1].text(i, v + 1, f'{v:.1f}%', ha='center', fontweight='bold')
 
-plt.tight_layout()
-plt.savefig(os.path.join(MODELS_DIR, 'evaluation_report.png'), dpi=150, bbox_inches='tight')
-print("✅ Evaluation charts saved to ../models/evaluation_report.png")
-plt.show()
+plt.savefig(os.path.join(MODELS_DIR, 'unsupervised_report.png'), dpi=150, bbox_inches='tight')
+print("✅ Evaluation charts saved to ../models/unsupervised_report.png")
 
 print("\n" + "=" * 60)
 print("PIPELINE COMPLETE")
